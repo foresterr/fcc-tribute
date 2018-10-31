@@ -1,0 +1,11 @@
+.flame {
+    margin-top: 100px;
+    margin-left: 100px;
+    box-sizing: border-box;
+    width: 25px;
+    height: 25px;
+    background-color: #3a568588;
+    border-radius: 125% 0 75% 50% / 75% 0 125% 50%;
+    transform: scaleX(0.8) rotateZ(-45deg);
+    box-shadow: 8px -8px 5px 10px #ffa84e;
+}
