@@ -1,11 +1,87 @@
+.candle {
+    margin-left: 50px;
+    margin-top: 50px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.holder-lip {
+    width: 70px;
+    height: 20px;
+    border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+}
+
+.holder-cup {
+    width: 50px;
+    height: 30px;
+    border-radius: 0 0 30% 30% / 0 0 70% 70%;
+}
+
+.holder-stem {
+    width: 20px;
+    height: 100px;
+}
+
+.holder-base {
+    margin-top: -5px;
+    width: 100px;
+    height: 30px;
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+}
+
+.holder {
+    background-color: #b5a642;
+}
+
+.wax {
+    width: 40px;
+    height: 250px;
+    background-color: palegoldenrod;
+    border-radius: 10% 10% 0 0 / 2% 2% 0 0;
+    animation: waxburn 20s linear forwards;
+}
+
+.wick {
+    background-color: black;
+    margin-top: -10px;
+    width: 3px;
+    height: 20px;
+}
+
 .flame {
-    margin-top: 100px;
-    margin-left: 100px;
     box-sizing: border-box;
     width: 25px;
     height: 25px;
-    background-color: #3a568588;
+    background-color: #6988bddd;
     border-radius: 125% 0 75% 50% / 75% 0 125% 50%;
     transform: scaleX(0.8) rotateZ(-45deg);
     box-shadow: 8px -8px 5px 10px #ffa84e;
+    animation: flame 3s linear infinite;
+}
+
+@keyframes waxburn {
+    to {
+        height: 30px;
+    }
+}
+
+@keyframes flame {
+    17% {
+        transform: translateX(-2px) skewX(5deg) scaleY(1.05) scaleX(0.8) rotateZ(-45deg);
+    }
+    34% {
+        transform: translateY(-1px) translateX(1px) skewX(-5deg) scaleY(1.1) scaleX(0.8) rotateZ(-45deg);
+    }
+    50% {
+        transform: translateY(-2px) scaleY(1.15) scaleX(0.8) rotateZ(-45deg);
+    }
+    66% {
+        transform: translateY(-1px) translateX(-1px) skewX(5deg) scaleY(1.1) scaleX(0.8) rotateZ(-45deg);
+    }
+    83% {
+        transform: translateX(2px) skewX(-5deg) scaleY(1.05) scaleX(0.8) rotateZ(-45deg);
+    }
 }
