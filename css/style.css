@@ -1,7 +1,10 @@
 .candle {
     margin-left: 50px;
     margin-top: 50px;
-    height: 500px;
+    padding: 0;
+    font-size: 8px;
+    width: 6em;
+    height: 30em;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -9,26 +12,28 @@
 }
 
 .holder-lip {
-    width: 70px;
-    height: 20px;
+    width: 70%;
+    height: 4%;
     border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
 }
 
 .holder-cup {
-    width: 50px;
-    height: 30px;
-    border-radius: 0 0 30% 30% / 0 0 70% 70%;
+    margin-top: -0.1em;
+    width: 50%;
+    height: 5%;
+    border-radius: 0 0 50% 50% / 0 0 100% 100%;
 }
 
 .holder-stem {
-    width: 20px;
-    height: 100px;
+    margin-top: -0.15em;
+    width: 20%;
+    height: 20%;
 }
 
 .holder-base {
-    margin-top: -5px;
-    width: 100px;
-    height: 30px;
+    margin-top: -0.1em;
+    width: 100%;
+    height: 6%;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
 
@@ -37,51 +42,68 @@
 }
 
 .wax {
-    width: 40px;
-    height: 250px;
+    width: 40%;
+    height: 15em;
     background-color: palegoldenrod;
     border-radius: 10% 10% 0 0 / 2% 2% 0 0;
-    animation: waxburn 20s linear forwards;
+    transform-origin: bottom;
+    animation: waxburn 120s linear forwards;
+}
+
+.flame-wrap {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    animation: follow-wax 120s linear forwards;
 }
 
 .wick {
     background-color: black;
-    margin-top: -10px;
-    width: 3px;
-    height: 20px;
+    margin-top: -0.5em;
+    width: 3%;
+    height: 20%;
 }
 
 .flame {
     box-sizing: border-box;
-    width: 25px;
-    height: 25px;
+    width: 25%;
+    height: 28%;
     background-color: #6988bddd;
     border-radius: 125% 0 75% 50% / 75% 0 125% 50%;
     transform: scaleX(0.8) rotateZ(-45deg);
-    box-shadow: 8px -8px 5px 10px #ffa84e;
+    box-shadow: 0.6em -0.7em 0.5em 1em #ffa84e;
     animation: flame 3s linear infinite;
+}
+
+@keyframes follow-wax {
+    to {
+        transform: translateY(13em);
+    }
 }
 
 @keyframes waxburn {
     to {
-        height: 30px;
+        transform: scaleY(0.1);
     }
 }
 
 @keyframes flame {
     17% {
-        transform: translateX(-2px) skewX(5deg) scaleY(1.05) scaleX(0.8) rotateZ(-45deg);
+        transform: translateX(-0.1em) skewX(5deg) scaleY(1.05) scaleX(0.8) rotateZ(-45deg);
     }
     34% {
-        transform: translateY(-1px) translateX(1px) skewX(-5deg) scaleY(1.1) scaleX(0.8) rotateZ(-45deg);
+        transform: translateY(-0.05em) translateX(0.1em) skewX(-5deg) scaleY(1.1) scaleX(0.8) rotateZ(-45deg);
     }
     50% {
-        transform: translateY(-2px) scaleY(1.15) scaleX(0.8) rotateZ(-45deg);
+        transform: translateY(-0.1em) scaleY(1.15) scaleX(0.8) rotateZ(-45deg);
     }
     66% {
-        transform: translateY(-1px) translateX(-1px) skewX(5deg) scaleY(1.1) scaleX(0.8) rotateZ(-45deg);
+        transform: translateY(-0.05em) translateX(-0.1em) skewX(5deg) scaleY(1.1) scaleX(0.8) rotateZ(-45deg);
     }
     83% {
-        transform: translateX(2px) skewX(-5deg) scaleY(1.05) scaleX(0.8) rotateZ(-45deg);
+        transform: translateX(0.02em) skewX(-5deg) scaleY(1.05) scaleX(0.8) rotateZ(-45deg);
     }
 }
