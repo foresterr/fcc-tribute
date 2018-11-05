@@ -1,29 +1,71 @@
+body {
+    background-color: pink;
+    background-image: url("../img/leaves.png");
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
 .main-content {
+    font-family: 'Open Sans', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+
+.main-text {
+    width: 80%;
 }
 
 .image-area {
     font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.altar-top {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-end;
 }
 
-.image {
-    width: 300px;
-    height: 400px;
+.altar-side {
+    display: flex;
+    flex-direction: column;
+    justify-items: flex-end;
+}
+
+.altar-left {
+    align-items: flex-end;
+}
+
+.altar-right {
+    align-items: flex-start;
+}
+
+.altar-center {
+    align-items: center;
+}
+
+.image-wrapper {
+    position: relative;
     border: 1em solid #81783e;
+    padding: 0;
+}
+
+.altar-plaque {
+    font-size: 16px;
+    position: absolute;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #b5a642;
+    border: 0.4em ridge #81783e;
+    padding: 0.5em;
+}
+
+.altar-image {
+    display: block;
+    max-width: 1024px;
+    width: 100%;
 }
 
 .altar-base {
@@ -34,29 +76,39 @@
 }
 
 .altar-base-step {
-    background-color: #b5a642dc;
+    background-color: #b5a642;
+    width: 100%;
     height: 1em;
-    padding: 1px;
-    background-clip: padding-box;
     border-bottom: 0.5em solid #81783e;
+    padding: 0.01px;
+    background-clip: padding-box;
+}
+
+.altar-base-step-left {
     border-left: 2em solid transparent;
+}
+
+.altar-base-step-right {
     border-right: 2em solid transparent;
 }
 
 .altar-base-step-1 {
-    width: 35em;
+    width: 7em;
 }
 .altar-base-step-2 {
-    width: 39em;
+    width: 9em;
 }
 .altar-base-step-3 {
-    width: 43em;
+    width: 11em;
+}
+
+.altar-base-bottom {
     border-bottom: 0;
 }
 
 .candle {
     width: 6em;
-    height: 30em;
+    height: 40em;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -65,27 +117,27 @@
 
 .holder-lip {
     width: 70%;
-    height: 4%;
+    height: 1.2em;
     border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
 }
 
 .holder-cup {
     margin-top: -0.1em;
     width: 50%;
-    height: 5%;
+    height: 1.5em;
     border-radius: 0 0 50% 50% / 0 0 100% 100%;
 }
 
 .holder-stem {
     margin-top: -0.15em;
     width: 20%;
-    height: 20%;
+    height: 6em;
 }
 
 .holder-base {
     margin-top: -0.1em;
     width: 100%;
-    height: 6%;
+    height: 1.8em;
     border-bottom: 0.5em solid #81783e;
     border-radius: 50% 50% 0 0 / 100% 100% 0 0;
 }
@@ -96,7 +148,7 @@
 
 .wax {
     width: 40%;
-    height: 15em;
+    height: 80%;
     background-color: palegoldenrod;
     border-radius: 10% 10% 0 0 / 2% 2% 0 0;
     transform-origin: bottom;
@@ -105,7 +157,7 @@
 
 .flame-wrap {
     width: 100%;
-    height: 20%;
+    height: 6em;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -133,7 +185,7 @@
 
 @keyframes follow-wax {
     to {
-        transform: translateY(13em);
+        transform: translateY(23.8em);
     }
 }
 
